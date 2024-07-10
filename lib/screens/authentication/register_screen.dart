@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_app/utils/colors.dart';
+import 'package:flutter_social_media_app/widgets/button.dart';
 import 'package:flutter_social_media_app/widgets/text_field.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -11,6 +12,9 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _userNameController = TextEditingController();
+  final TextEditingController _bioController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   'assets/images/VibeSphereLogo02.png',
                   height: 150,
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
                 Stack(
                   children: [
                     const CircleAvatar(
@@ -67,6 +71,56 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   hintText: "Enter you email",
                   isPassword: false,
                   inputKeyboardType: TextInputType.emailAddress,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextInputField(
+                  controller: _passwordController,
+                  hintText: "Enter a password",
+                  isPassword: true,
+                  inputKeyboardType: TextInputType.text,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextInputField(
+                  controller: _userNameController,
+                  hintText: "Enter a username",
+                  isPassword: false,
+                  inputKeyboardType: TextInputType.text,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextInputField(
+                  controller: _bioController,
+                  hintText: "Enter Bio",
+                  isPassword: false,
+                  inputKeyboardType: TextInputType.text,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                SubmitButton(
+                  onPressed: () {},
+                  text: "Register",
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Already have an account",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Log In",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
