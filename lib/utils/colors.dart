@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 
-const mobileGradientBackgroundColor = DecoratedBox(
-  decoration: BoxDecoration(
-    gradient: LinearGradient(
-      colors: [
-        const Color(0xff013852),
-        const Color(0xff00283c),
-      ],
-    ),
-  ),
-);
+const mobileGradientBackgroundColor = [Color(0xffFF7014), Color(0xffFF8E45)];
 const mobileBlackBackgroundColor = Color(0xFF000000);
 const webBackgroundColor = Color(0xFFFF6909);
 const mobileBackgroundColor = Color(0xFFFF6909);

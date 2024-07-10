@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_social_media_app/screens/authentication/login_screen.dart';
 import 'package:flutter_social_media_app/screens/authentication/register_screen.dart';
+import 'package:flutter_social_media_app/utils/colors.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,10 +26,7 @@ class MyApp extends StatelessWidget {
       home: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color(0xffFF7014),
-                Color(0xffFF8E45),
-              ],
+              colors: mobileGradientBackgroundColor,
             ),
           ),
           child: const RegisterScreen()),
