@@ -23,13 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: "Threads clone",
-      home: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: mobileGradientBackgroundColor,
-            ),
-          ),
-          child: const RegisterScreen()),
+      home: const RegisterScreen(),
     );
   }
 }
