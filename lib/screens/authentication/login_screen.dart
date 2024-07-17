@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_social_media_app/screens/authentication/register_screen.dart';
+import 'package:flutter_social_media_app/screens/home.dart';
 import 'package:flutter_social_media_app/utils/colors.dart';
 import 'package:flutter_social_media_app/widgets/button.dart';
 import 'package:flutter_social_media_app/widgets/text_field.dart';
@@ -58,11 +59,30 @@ class _LoginScreenState extends State<LoginScreen> {
                     isPassword: true,
                     inputKeyboardType: TextInputType.text,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          "Forgot Password",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                    ],
+                  ),
                   const SizedBox(
                     height: 10,
                   ),
                   SubmitButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Home(),
+                        ),
+                      );
+                    },
                     text: "Log In",
                   ),
                   Row(
